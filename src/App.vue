@@ -1,6 +1,7 @@
 <template>
   <main class="grid-container">
     <weather-box v-for="city in cities" :key="city" :prop-city="city"></weather-box>
+    {{ cityWeather }}
   </main>
 </template>
 
@@ -16,6 +17,12 @@ export default {
     cities() {
       return this.$store.getters.getCities;
     },
+    cityWeather() {
+      return this.$store.getters.getCityWeather;
+    },
+  },
+  mounted() {
+    console.log(process.env.VUE_APP_OPEN_WEATHER_MAP_KEY);
   },
 };
 </script>
