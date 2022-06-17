@@ -1,14 +1,16 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 export default createStore({
-  state: {
+  state() {
+    return {
+      cities: ["Istanbul", "Munich", "Paris", "London", "Glasgow"],
+    };
   },
   getters: {
+    getCities(state) {
+      return state.cities;
+    },
   },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+  mutations: {},
+  actions: {},
+});
