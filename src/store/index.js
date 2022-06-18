@@ -4,7 +4,7 @@ export default createStore({
   state() {
     return {
       cities: ["Istanbul", "Munich", "Paris", "London", "Glasgow"],
-      isCardBackVisible: false,
+      visibleCardBack: "",
       citiesWeather: [],
       cityForecast: [],
     };
@@ -20,7 +20,7 @@ export default createStore({
       return state.cityForecast;
     },
     getCardStatus(state) {
-      return state.isCardBackVisible;
+      return state.visibleCardBack;
     },
   },
   mutations: {
@@ -30,8 +30,8 @@ export default createStore({
     storeCityForecast(state, payload) {
       state.cityForecast = payload;
     },
-    toggleCardBackStatus(state, payload) {
-      state.isCardBackVisible = payload;
+    storeCardBackStatus(state, payload) {
+      state.visibleCardBack = payload;
     },
   },
   actions: {

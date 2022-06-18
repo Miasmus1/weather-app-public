@@ -2,7 +2,7 @@
   <article class="weather-box">
     <div class="weather-box__local">
       <p>{{ propCity.name }}</p>
-      <svg v-if="isCardBackVisible" role="img" class="weather-box__toggle" @click="toggleCardBack">
+      <svg v-if="whichCardBackVisible" role="img" class="weather-box__toggle" @click="toggleCardBack('')">
         <use href="@/assets/ui-sprite.svg#chevron-down"></use>
       </svg>
       <p v-else>{{ propCity.time }}</p>
@@ -22,11 +22,11 @@
       <h2>{{ propCity.temp }}&deg;</h2>
     </div>
 
-    <svg role="img" class="weather-box__toggle" @click="toggleCardBack">
+    <svg role="img" class="weather-box__toggle" @click="toggleCardBack(propCity.name)">
       <use href="@/assets/ui-sprite.svg#chevron-up"></use>
     </svg>
 
-    <weather-box-back v-if="isCardBackVisible" :the-city="propCity.name"></weather-box-back>
+    <weather-box-back v-if="whichCardBackVisible" :the-city="propCity.name"></weather-box-back>
   </article>
 </template>
 
@@ -35,18 +35,16 @@ import WeatherBoxBack from "@/components/WeatherBoxBack.vue";
 export default {
   props: ["propCity"],
   components: { WeatherBoxBack },
-  data() {
-    return {
-      isCardBackVisible: false,
-    };
-  },
-  methods: {
-    toggleCardBack() {
-      this.isCardBackVisible = !this.isCardBackVisible;
+  computed: {
+    whichCardBackVisible() {
+      const city = this.$store.getters.getCardStatus;
+      return this.propCity.name === city ? true : false;
     },
   },
-  mounted() {
-    console.table(this.propCity);
+  methods: {
+    toggleCardBack(city) {
+      this.$store.commit("storeCardBackStatus", city);
+    },
   },
 };
 </script>
