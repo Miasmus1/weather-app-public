@@ -4,7 +4,7 @@ export default createStore({
   state() {
     return {
       cities: ["Istanbul", "Munich", "Paris", "London", "Glasgow"],
-      cityWeather: {},
+      citiesWeather: [],
     };
   },
   getters: {
@@ -12,12 +12,12 @@ export default createStore({
       return state.cities;
     },
     getCityWeather(state) {
-      return state.cityData;
+      return state.citiesWeather;
     },
   },
   mutations: {
     storeCityWeather(state, payload) {
-      state.cityData = payload;
+      state.citiesWeather.push(payload);
     },
   },
   actions: {
@@ -30,7 +30,30 @@ export default createStore({
         const error = new Error(responseData.message || "Failed to fetch requests");
         throw error;
       }
-      context.commit("storeCityWeather", responseData);
+      console.log(responseData);
+
+      function convertTimezone(unix, timezone) {
+        const localTime = unix + timezone; // in seconds
+
+        const minutes = Math.floor((localTime / 60) % 60);
+        const hours = Math.floor((localTime / 60 / 60) % 24);
+        const formattedTime = [hours.toString().padStart(2, "0"), minutes.toString().padStart(2, "0")].join(":");
+
+        return formattedTime;
+      }
+
+      const cityWeatherData = {
+        id: responseData.id,
+        name: responseData.name,
+        time: convertTimezone(responseData.dt, responseData.timezone),
+        temp: responseData.main.temp,
+        windSpeed: responseData.wind.speed,
+        humidity: responseData.main.humidity,
+        pressure: responseData.main.pressure,
+        weatherDesc: responseData.weather[0].description,
+        weatherIcon: responseData.weather[0].icon,
+      };
+      context.commit("storeCityWeather", cityWeatherData);
     },
   },
 });

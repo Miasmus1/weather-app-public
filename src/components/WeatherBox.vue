@@ -1,22 +1,23 @@
 <template>
   <article class="weather-box">
+    {{ propCity }}
     <div class="weather-box__local">
-      <p>{{ propCity }}</p>
-      <p>16:05</p>
+      <p>{{ propCity.name }}</p>
+      <p>{{ propCity.time }}</p>
     </div>
     <div class="weather-box__visual">
       <svg role="img">
         <use href="@/assets/weather-sprite.svg#thunder"></use>
       </svg>
-      <p>Heavy Rain</p>
+      <p>{{ propCity.weatherDesc }}</p>
     </div>
     <div class="weather-box__details">
       <ul>
-        <li>11km/h</li>
-        <li>95%</li>
-        <li>1.5h</li>
+        <li>{{ propCity.windSpeed }} km/h</li>
+        <li>{{ propCity.humidity }}%</li>
+        <li>{{ propCity.pressure }}hPa</li>
       </ul>
-      <h2>8&deg;</h2>
+      <h2>{{ propCity.temp }}&deg;</h2>
     </div>
     <svg role="img" class="weather-box__toggle">
       <use href="@/assets/ui-sprite.svg#chevron-up"></use>
@@ -28,7 +29,7 @@
 export default {
   props: ["propCity"],
   mounted() {
-    this.$store.dispatch("fetchWeather", this.propCity);
+    console.table(this.propCity);
   },
 };
 </script>
@@ -56,6 +57,10 @@ export default {
   &__visual {
     text-align: center;
     margin-bottom: 6rem;
+
+    & > p {
+      text-transform: capitalize;
+    }
   }
 
   &__details {
