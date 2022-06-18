@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss">
 .grid-container {
-  width: 130rem;
+  width: 120rem;
   margin: 5rem auto 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

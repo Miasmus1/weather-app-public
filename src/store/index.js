@@ -46,7 +46,7 @@ export default createStore({
         id: responseData.id,
         name: responseData.name,
         time: convertTimezone(responseData.dt, responseData.timezone),
-        temp: responseData.main.temp,
+        temp: Math.round(+responseData.main.temp),
         windSpeed: responseData.wind.speed,
         humidity: responseData.main.humidity,
         pressure: responseData.main.pressure,

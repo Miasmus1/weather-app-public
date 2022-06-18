@@ -1,0 +1,367 @@
+<svg width="0" height="0" class="hidden">
+  <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 64 64" viewBox="0 0 64 64" id="10d">
+    <defs>
+      <filter id="blur" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+        <feOffset dx="0" dy="4" result="offsetblur"></feOffset>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.05"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <g filter="url(#blur)" id="rainy-3">
+      <g transform="translate(20,10)">
+        <g transform="translate(0,16)">
+          <g>
+            <g>
+              <line fifll="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(45)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(90)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(135)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(180)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(225)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(270)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(315)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+          </g>
+          <circle cx="0" cy="0" fill="orange" r="5" stroke="orange" stroke-width="2"></circle>
+        </g>
+        <g>
+          <path d="M47.7,35.4c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3    c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#57A0EE" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-20,-11)"></path>
+        </g>
+      </g>
+      <g transform="translate(34,46), rotate(10)">
+        <line fill="none" stroke="#91C0F8" stroke-dasharray="4,7" stroke-linecap="round" stroke-width="2" transform="translate(-6,1)" x1="0" x2="0" y1="0" y2="8"></line>
+        <line fill="none" stroke="#91C0F8" stroke-dasharray="4,7" stroke-linecap="round" stroke-width="2" transform="translate(0,-1)" x1="0" x2="0" y1="0" y2="8"></line>
+      </g>
+    </g>
+  </symbol>
+  <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 64 64" viewBox="0 0 64 64" id="11d">
+    <defs>
+      <filter id="blur" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+        <feOffset dx="0" dy="4" result="offsetblur"></feOffset>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.05"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <g filter="url(#blur)" id="thunder">
+      <g transform="translate(20,10)">
+        <g>
+          <path d="M47.7,35.4     c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3     c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#91C0F8" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-10,-6), scale(0.6)"></path>
+        </g>
+        <g>
+          <path d="M47.7,35.4     c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3     c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#57A0EE" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-20,-11)"></path>
+        </g>
+        <g transform="translate(-9,28), scale(1.2)">
+          <polygon fill="orange" stroke="white" stroke-width="1" points="14.3,-2.9 20.5,-2.9 16.4,4.3 20.3,4.3 11.5,14.6 14.9,6.9 11.1,6.9"></polygon>
+        </g>
+      </g>
+    </g>
+  </symbol>
+  <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 64 64" viewBox="0 0 64 64" id="13d">
+    <defs>
+      <filter id="blur" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+        <feOffset dx="0" dy="4" result="offsetblur"></feOffset>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.05"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <g filter="url(#blur)" id="snowy-6">
+      <g transform="translate(20,10)">
+        <g>
+          <path d="M47.7,35.4c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3    c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#57A0EE" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-20,-11)"></path>
+        </g>
+        <g>
+          <g transform="translate(3,28)">
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1.2" transform="translate(0,9), rotate(0)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1" transform="translate(0,9), rotate(45)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1" transform="translate(0,9), rotate(90)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1" transform="translate(0,9), rotate(135)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+          </g>
+        </g>
+        <g>
+          <g transform="translate(11,28)">
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1.2" transform="translate(0,9), rotate(0)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1" transform="translate(0,9), rotate(45)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1" transform="translate(0,9), rotate(90)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1" transform="translate(0,9), rotate(135)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+          </g>
+        </g>
+        <g>
+          <g transform="translate(20,28)">
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1.2" transform="translate(0,9), rotate(0)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1" transform="translate(0,9), rotate(45)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1" transform="translate(0,9), rotate(90)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+            <line fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="1" transform="translate(0,9), rotate(135)" x1="0" x2="0" y1="-2.5" y2="2.5"></line>
+          </g>
+        </g>
+      </g>
+    </g>
+  </symbol>
+  <symbol version="1.1" id="50d" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve" viewBox="0 0 488 488">
+    <g transform="translate(0 -540.36)">
+      <g>
+        <g>
+          <path d="M192.4,991.11h-162c-5.5,0-10,4.5-10,10s4.5,10,10,10h162c5.6,0,10-4.5,10-10S197.9,991.11,192.4,991.11z"></path>
+          <path d="M435.8,950.61H50.9c-5.5,0-10,4.5-10,10s4.5,10,10,10h384.9c5.6,0,10-4.5,10-10S441.3,950.61,435.8,950.61z"></path>
+          <path d="M456.4,909.41H264c-5.5,0-10,4.5-10,10s4.5,10,10,10h192.4c5.5,0,10-4.5,10-10S461.9,909.41,456.4,909.41z"></path>
+          <path d="M121.8,873.71h131.6c28.1,0,53.2-12.8,70-32.8H385c5.5,0,10-4.5,10-10s-4.5-10-10-10h-48.8c2.8-5.9,4.9-12.2,6.4-18.7h54
+				c50.4,0,91.4-41.1,91.4-91.7c0-50.6-41.1-91.8-91.5-91.8l0,0c-8,0-16.5,1.3-24.6,3.7c-21.5-39.7-62.5-64.8-106.9-64.8
+				c-26.2,0-51.2,8.3-72.3,24c-5,3.7-9.8,7.9-14.2,12.4h-66.6c-5.5,0-10,4.5-10,10s4.5,10,10,10h50.6c-4,6.3-7.5,12.9-10.3,19.7
+				c-9.8-2.5-19.9-3.8-30.4-3.8C54.6,629.91,0,684.41,0,751.41C0,818.81,54.6,873.71,121.8,873.71z M187.3,613.91h45.5
+				c5.5,0,10-4.5,10-10s-4.5-10-10-10h-22.7c16.1-10.4,35.1-16.4,54.8-16.4c39.6,0,76,24.1,92.8,61.3c2.2,4.9,8,7.2,13,5.1
+				c8.1-3.4,17.5-5.3,25.8-5.3c39.4,0,71.4,32.2,71.4,71.7c-0.1,39.6-32.1,71.8-71.4,71.8v0h-51.8c0-0.1,0-0.1,0-0.2
+				c0-24.4-9.5-47.3-26.8-64.5c-17.2-17.1-40.2-26.5-64.6-26.5c-8.6,0-16.7,1-24.4,3.1c-12.8-24.3-33.3-43-57.8-53.8
+				C175.2,630.61,180.7,621.71,187.3,613.91z M121.6,649.81c40.5,0,76.9,23.7,92.7,60.4c2.1,4.9,7.8,7.3,12.8,5.4
+				c8.1-3.1,16.7-4.7,26.1-4.7c39.4,0,71.4,31.8,71.4,70.9c0,14.3-4.2,27.7-11.4,38.9h-49.3v0.1c-5.5,0-10,4.5-10,10s4.5,10,10,10
+				h30c-11.6,8.1-25.6,12.8-40.7,12.8H121.6c-56.1,0-101.8-45.9-101.8-102.3C19.8,695.31,65.5,649.81,121.6,649.81z"></path>
+        </g>
+      </g>
+    </g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+  </symbol>
+  <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 64 64" viewBox="0 0 64 64" id="01d">
+    <defs>
+      <filter id="blur" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+        <feOffset dx="0" dy="4" result="offsetblur"></feOffset>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.05"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <g filter="url(#blur)" id="day">
+      <g transform="translate(32,32)">
+        <g>
+          <g>
+            <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+          </g>
+          <g transform="rotate(45)">
+            <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+          </g>
+          <g transform="rotate(90)">
+            <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+          </g>
+          <g transform="rotate(135)">
+            <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+          </g>
+          <g transform="rotate(180)">
+            <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+          </g>
+          <g transform="rotate(225)">
+            <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+          </g>
+          <g transform="rotate(270)">
+            <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+          </g>
+          <g transform="rotate(315)">
+            <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+          </g>
+        </g>
+        <circle cx="0" cy="0" fill="orange" r="5" stroke="orange" stroke-width="2"></circle>
+      </g>
+    </g>
+  </symbol>
+  <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 64 64" viewBox="0 0 64 64" id="03d">
+    <defs>
+      <filter id="blur" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+        <feOffset dx="0" dy="4" result="offsetblur"></feOffset>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.05"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <g filter="url(#blur)" id="cloudy-day-1">
+      <g transform="translate(20,10)">
+        <g transform="translate(0,16)">
+          <g>
+            <g>
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(45)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(90)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(135)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(180)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(225)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(270)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(315)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+          </g>
+          <circle cx="0" cy="0" fill="orange" r="5" stroke="orange" stroke-width="2"></circle>
+        </g>
+        <g>
+          <path d="M47.7,35.4c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3    c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#C6DEFF" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-20,-11)"></path>
+        </g>
+      </g>
+    </g>
+  </symbol>
+  <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 64 64" viewBox="0 0 64 64" id="02d">
+    <defs>
+      <filter id="blur" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+        <feOffset dx="0" dy="4" result="offsetblur"></feOffset>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.05"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <g filter="url(#blur)" id="cloudy-day-3">
+      <g transform="translate(20,10)">
+        <g transform="translate(0,16)">
+          <g>
+            <g>
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(45)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(90)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(135)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(180)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(225)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(270)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+            <g transform="rotate(315)">
+              <line fill="none" stroke="orange" stroke-linecap="round" stroke-width="2" transform="translate(0,9)" x1="0" x2="0" y1="0" y2="3"></line>
+            </g>
+          </g>
+          <circle cx="0" cy="0" fill="orange" r="5" stroke="orange" stroke-width="2"></circle>
+        </g>
+        <g>
+          <path d="M47.7,35.4c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3    c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#57A0EE" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-20,-11)"></path>
+        </g>
+      </g>
+    </g>
+  </symbol>
+  <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 64 64" viewBox="0 0 64 64" id="04d">
+    <defs>
+      <filter id="blur" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+        <feOffset dx="0" dy="4" result="offsetblur"></feOffset>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.05"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <g filter="url(#blur)" id="cloudy">
+      <g transform="translate(20,10)">
+        <g>
+          <path d="M47.7,35.4     c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3     c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#91C0F8" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-10,-8), scale(0.6)"></path>
+        </g>
+        <g>
+          <path d="M47.7,35.4     c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3     c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#57A0EE" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-20,-11)"></path>
+        </g>
+      </g>
+    </g>
+  </symbol>
+  <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 64 64" viewBox="0 0 64 64" id="09d">
+    <defs>
+      <filter id="blur" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+        <feOffset dx="0" dy="4" result="offsetblur"></feOffset>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.05"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <g filter="url(#blur)" id="rainy-6">
+      <g transform="translate(20,10)">
+        <g>
+          <path d="M47.7,35.4c0-4.6-3.7-8.2-8.2-8.2c-1,0-1.9,0.2-2.8,0.5c-0.3-3.4-3.1-6.2-6.6-6.2c-3.7,0-6.7,3-6.7,6.7c0,0.8,0.2,1.6,0.4,2.3    c-0.3-0.1-0.7-0.1-1-0.1c-3.7,0-6.7,3-6.7,6.7c0,3.6,2.9,6.6,6.5,6.7l17.2,0C44.2,43.3,47.7,39.8,47.7,35.4z" fill="#57A0EE" stroke="white" stroke-linejoin="round" stroke-width="1.2" transform="translate(-20,-11)"></path>
+        </g>
+      </g>
+      <g transform="translate(31,46), rotate(10)">
+        <line fill="none" stroke="#91C0F8" stroke-dasharray="4,4" stroke-linecap="round" stroke-width="2" transform="translate(-4,1)" x1="0" x2="0" y1="0" y2="8"></line>
+        <line fill="none" stroke="#91C0F8" stroke-dasharray="4,4" stroke-linecap="round" stroke-width="2" transform="translate(0,-1)" x1="0" x2="0" y1="0" y2="8"></line>
+        <line fill="none" stroke="#91C0F8" stroke-dasharray="4,4" stroke-linecap="round" stroke-width="2" transform="translate(4,0)" x1="0" x2="0" y1="0" y2="8"></line>
+      </g>
+    </g>
+  </symbol>
+</svg>
