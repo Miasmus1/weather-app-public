@@ -2,10 +2,13 @@
   <article class="weather-box">
     <div class="weather-box__local">
       <p>{{ propCity.name }}</p>
-      <svg v-if="whichCardBackVisible" role="img" class="weather-box__btn close-btn" @click="toggleCardBack('')">
-        <use href="@/assets/ui-sprite.svg#chevron-down"></use>
-      </svg>
-      <p v-else>{{ propCity.time }}</p>
+      <transition mode="out-in">
+        <svg v-if="whichCardBackVisible" role="img" class="weather-box__btn close-btn" @click="toggleCardBack('')">
+          <use href="@/assets/ui-sprite.svg#chevron-down"></use>
+        </svg>
+
+        <p v-else>{{ propCity.time.formattedTime }}</p>
+      </transition>
     </div>
 
     <div class="weather-box__visual">
@@ -26,7 +29,9 @@
       <use href="@/assets/ui-sprite.svg#chevron-up"></use>
     </svg>
 
-    <weather-box-back v-if="whichCardBackVisible" :the-city="propCity.name"></weather-box-back>
+    <transition>
+      <weather-box-back v-if="whichCardBackVisible" :the-city="propCity.name"></weather-box-back>
+    </transition>
   </article>
 </template>
 
@@ -58,10 +63,15 @@ export default {
   box-shadow: 0 0 2px rgba(139, 139, 139, 0.5);
   overflow: hidden;
 
-  &__local p:first-child {
-    background-color: #222;
-    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-    padding: 0.6rem 2.6rem;
+  &__local {
+    letter-spacing: 1.1px;
+
+    p:first-child {
+      background-color: #222;
+      box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+      padding: 0.6rem 2.6rem;
+      letter-spacing: 1.2px;
+    }
   }
 
   &__local,
@@ -112,5 +122,15 @@ export default {
       margin: 0;
     }
   }
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease 0.12s;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

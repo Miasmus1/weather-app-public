@@ -1,12 +1,11 @@
 <template>
   <div class="weather-box-back">
-    <div v-for="threeHourly in getCityForecast" :key="threeHourly.dt">
+    <div v-for="threeHourly in getCityForecast" :key="threeHourly.time">
       <div class="weather-box-back__visual">
         <img :src="`../icons/${threeHourly.weatherIcon}.png`" :alt="threeHourly.weatherDesc" />
         <p>{{ threeHourly.weatherDesc }}</p>
-        <p>
-          <strong>{{ threeHourly.temp }}&deg;</strong>
-        </p>
+        <p>{{ threeHourly.time.formattedDate }} {{ threeHourly.time.formattedTime }}</p>
+        <p>{{ threeHourly.temp }}&deg;</p>
       </div>
     </div>
   </div>
@@ -30,21 +29,25 @@ export default {
 .weather-box-back {
   position: absolute;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 2rem;
   padding: 1rem;
   justify-items: center;
   bottom: 0px;
   left: 0px;
-  height: 80%;
+  height: 83%;
   width: 100%;
-  background-color: rgba(30, 30, 30, 0.2);
-  backdrop-filter: blur(15px);
+  background-color: rgba(20, 20, 20, 0.1);
+  backdrop-filter: blur(14px);
   overflow-y: scroll;
   font-size: 1.2rem;
 
   &__visual {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 10rem;
 
     & > img {
       width: 3.2rem;
@@ -53,6 +56,10 @@ export default {
 
     & > p {
       text-transform: capitalize;
+    }
+
+    & > p:last-child {
+      font-size: 2rem;
     }
   }
 }

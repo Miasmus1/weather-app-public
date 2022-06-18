@@ -1,9 +1,27 @@
 import { createStore } from "vuex";
 
+function convertTimezone(unix, timezone) {
+  const localTime = unix + timezone; // in seconds
+
+  const minutes = Math.floor((localTime / 60) % 60);
+  const hours = Math.floor((localTime / 60 / 60) % 24);
+
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  const localTimezoneOffset = new Date(localTime * 1000).getTimezoneOffset() * 60 * 1000;
+  const monthIndex = new Date(localTime * 1000 + localTimezoneOffset).getMonth();
+  const day = new Date(localTime * 1000 + localTimezoneOffset).getDate();
+
+  const formattedDate = `${day} ${months[monthIndex]}`;
+  const formattedTime = [hours.toString().padStart(2, "0"), minutes.toString().padStart(2, "0")].join(":");
+
+  return { formattedDate, formattedTime };
+}
+
 export default createStore({
   state() {
     return {
-      cities: ["Istanbul", "Munich", "Paris", "London", "Glasgow"],
+      cities: ["Istanbul", "Munich", "Paris", "London", "Glasgow", "Culloden"],
       visibleCardBack: "",
       citiesWeather: [],
       cityForecast: [],
@@ -41,20 +59,10 @@ export default createStore({
       );
       const responseData = await response.json();
       if (!response.ok) {
-        const error = new Error(responseData.message || "Failed to fetch requests");
+        const error = new Error(responseData.message || "Failed to fetch request");
         throw error;
       }
       console.log(responseData);
-
-      function convertTimezone(unix, timezone) {
-        const localTime = unix + timezone; // in seconds
-
-        const minutes = Math.floor((localTime / 60) % 60);
-        const hours = Math.floor((localTime / 60 / 60) % 24);
-        const formattedTime = [hours.toString().padStart(2, "0"), minutes.toString().padStart(2, "0")].join(":");
-
-        return formattedTime;
-      }
 
       const cityWeatherData = {
         id: responseData.id,
@@ -75,15 +83,17 @@ export default createStore({
       );
       const responseData = await response.json();
       if (!response.ok) {
-        const error = new Error(responseData.message || "Failed to fetch requests");
+        const error = new Error(responseData.message || "Failed to fetch request");
         throw error;
       }
       console.log(responseData);
 
+      const { timezone } = responseData.city;
+
       let filteredForecastArray = [];
       responseData.list.forEach((weather) => {
         let filterObject = {
-          id: weather.dt,
+          time: convertTimezone(weather.dt, timezone),
           temp: Math.round(+weather.main.temp),
           weatherIcon: weather.weather[0].icon,
           weatherDesc: weather.weather[0].description,

@@ -1,6 +1,6 @@
 <template>
   <main class="grid-container">
-    <weather-box v-for="city in cityWeather" :key="city" :prop-city="city"></weather-box>
+    <weather-box v-for="city in cityWeather" :key="city.id" :prop-city="city"></weather-box>
   </main>
 </template>
 
