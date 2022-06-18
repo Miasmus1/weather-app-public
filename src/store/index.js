@@ -4,7 +4,9 @@ export default createStore({
   state() {
     return {
       cities: ["Istanbul", "Munich", "Paris", "London", "Glasgow"],
+      isCardBackVisible: false,
       citiesWeather: [],
+      cityForecast: [],
     };
   },
   getters: {
@@ -14,10 +16,22 @@ export default createStore({
     getCityWeather(state) {
       return state.citiesWeather;
     },
+    getCityForecast(state) {
+      return state.cityForecast;
+    },
+    getCardStatus(state) {
+      return state.isCardBackVisible;
+    },
   },
   mutations: {
     storeCityWeather(state, payload) {
       state.citiesWeather.push(payload);
+    },
+    storeCityForecast(state, payload) {
+      state.cityForecast = payload;
+    },
+    toggleCardBackStatus(state, payload) {
+      state.isCardBackVisible = payload;
     },
   },
   actions: {
@@ -54,6 +68,30 @@ export default createStore({
         weatherIcon: responseData.weather[0].icon,
       };
       context.commit("storeCityWeather", cityWeatherData);
+    },
+    async fetchThreeDaysForecast(context, payload) {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/forecast?q=${payload}&appid=${process.env.VUE_APP_OPEN_WEATHER_MAP_KEY}&units=metric`
+      );
+      const responseData = await response.json();
+      if (!response.ok) {
+        const error = new Error(responseData.message || "Failed to fetch requests");
+        throw error;
+      }
+      console.log(responseData);
+
+      let filteredForecastArray = [];
+      responseData.list.forEach((weather) => {
+        let filterObject = {
+          id: weather.dt,
+          temp: Math.round(+weather.main.temp),
+          weatherIcon: weather.weather[0].icon,
+          weatherDesc: weather.weather[0].description,
+        };
+        filteredForecastArray.push(filterObject);
+      });
+
+      context.commit("storeCityForecast", filteredForecastArray);
     },
   },
 });

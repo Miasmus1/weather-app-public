@@ -2,14 +2,17 @@
   <article class="weather-box">
     <div class="weather-box__local">
       <p>{{ propCity.name }}</p>
-      <p>{{ propCity.time }}</p>
-    </div>
-    <div class="weather-box__visual">
-      <svg role="img">
-        <use :href="weatherIconPath"></use>
+      <svg v-if="isCardBackVisible" role="img" class="weather-box__toggle" @click="toggleCardBack">
+        <use href="@/assets/ui-sprite.svg#chevron-down"></use>
       </svg>
+      <p v-else>{{ propCity.time }}</p>
+    </div>
+
+    <div class="weather-box__visual">
+      <img :src="`../icons/${propCity.weatherIcon}.png`" :alt="propCity.weatherDesc" />
       <p>{{ propCity.weatherDesc }}</p>
     </div>
+
     <div class="weather-box__details">
       <ul>
         <li>{{ propCity.windSpeed }} km/h</li>
@@ -18,10 +21,12 @@
       </ul>
       <h2>{{ propCity.temp }}&deg;</h2>
     </div>
+
     <svg role="img" class="weather-box__toggle" @click="toggleCardBack">
       <use href="@/assets/ui-sprite.svg#chevron-up"></use>
     </svg>
-    <weather-box-back v-if="isCardBackVisible"></weather-box-back>
+
+    <weather-box-back v-if="isCardBackVisible" :the-city="propCity.name"></weather-box-back>
   </article>
 </template>
 
@@ -34,11 +39,6 @@ export default {
     return {
       isCardBackVisible: false,
     };
-  },
-  computed: {
-    weatherIconPath() {
-      return `../weather-sprite.svg#${this.propCity.weatherIcon}`;
-    },
   },
   methods: {
     toggleCardBack() {
@@ -54,7 +54,7 @@ export default {
 <style scope lang="scss">
 .weather-box {
   position: relative;
-  background: linear-gradient(to bottom left, #222, #000);
+  background: linear-gradient(to bottom left, #333, #111);
   padding: 3rem 3rem 1rem 3rem;
   border-radius: 8px;
   box-shadow: 0 0 2px rgba(139, 139, 139, 0.5);
@@ -77,7 +77,7 @@ export default {
     text-align: center;
     margin: 2rem 0 6rem 0;
 
-    & > svg {
+    & > img {
       width: 12rem;
       height: 12rem;
     }
