@@ -2,7 +2,7 @@
   <article class="weather-box">
     <div class="weather-box__local">
       <p>{{ propCity.name }}</p>
-      <svg v-if="whichCardBackVisible" role="img" class="weather-box__toggle" @click="toggleCardBack('')">
+      <svg v-if="whichCardBackVisible" role="img" class="weather-box__btn close-btn" @click="toggleCardBack('')">
         <use href="@/assets/ui-sprite.svg#chevron-down"></use>
       </svg>
       <p v-else>{{ propCity.time }}</p>
@@ -22,7 +22,7 @@
       <h2>{{ propCity.temp }}&deg;</h2>
     </div>
 
-    <svg role="img" class="weather-box__toggle" @click="toggleCardBack(propCity.name)">
+    <svg role="img" class="weather-box__btn" @click="toggleCardBack(propCity.name)">
       <use href="@/assets/ui-sprite.svg#chevron-up"></use>
     </svg>
 
@@ -61,7 +61,7 @@ export default {
   &__local p:first-child {
     background-color: #222;
     box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-    padding: 0.4rem 2.4rem;
+    padding: 0.6rem 2.6rem;
   }
 
   &__local,
@@ -101,12 +101,16 @@ export default {
     }
   }
 
-  &__toggle {
+  &__btn {
     display: block;
-    width: 3.6rem;
-    height: 3.6rem;
+    width: 3rem;
+    height: 3rem;
     margin: 0 auto;
     cursor: pointer;
+
+    &.close-btn {
+      margin: 0;
+    }
   }
 }
 </style>
