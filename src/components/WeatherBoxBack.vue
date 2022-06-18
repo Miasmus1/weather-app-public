@@ -1,12 +1,10 @@
 <template>
   <div class="weather-box-back">
-    <div v-for="threeHourly in getCityForecast" :key="threeHourly.time">
-      <div class="weather-box-back__visual">
-        <img :src="`../icons/${threeHourly.weatherIcon}.png`" :alt="threeHourly.weatherDesc" />
-        <p>{{ threeHourly.weatherDesc }}</p>
-        <p>{{ threeHourly.time.formattedDate }} {{ threeHourly.time.formattedTime }}</p>
-        <p>{{ threeHourly.temp }}&deg;</p>
-      </div>
+    <div v-for="threeHourly in getCityForecast" :key="threeHourly.time" class="weather-box-back__visual">
+      <img :src="`../icons/${threeHourly.weatherIcon}.png`" :alt="threeHourly.weatherDesc" />
+      <p>{{ threeHourly.weatherDesc }}</p>
+      <p>{{ threeHourly.time.formattedDate }} {{ threeHourly.time.formattedTime }}</p>
+      <p>{{ threeHourly.temp }}&deg;</p>
     </div>
   </div>
 </template>
@@ -28,11 +26,11 @@ export default {
 <style scope lang="scss">
 .weather-box-back {
   position: absolute;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem 2rem;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
   justify-items: center;
+  gap: 1rem;
+  padding: 1rem;
   bottom: 0px;
   left: 0px;
   height: 83%;
@@ -44,10 +42,9 @@ export default {
 
   &__visual {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    height: 10rem;
+    align-items: center;
+    text-align: center;
 
     & > img {
       width: 3.2rem;
@@ -58,7 +55,17 @@ export default {
       text-transform: capitalize;
     }
 
+    & > p:nth-child(2) {
+      flex-basis: 35%;
+    }
+
+    & > p:nth-child(3) {
+      flex-basis: 30%;
+    }
+
     & > p:last-child {
+      flex-basis: 15%;
+      text-align: end;
       font-size: 2rem;
     }
   }
