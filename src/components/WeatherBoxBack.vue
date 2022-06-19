@@ -1,7 +1,7 @@
 <template>
   <div class="weather-box-back">
     <div v-for="threeHourly in getCityForecast" :key="threeHourly.time" class="weather-box-back__visual">
-      <img :src="`../icons/${threeHourly.weatherIcon}.png`" :alt="threeHourly.weatherDesc" />
+      <img :src="require(`@/assets/icons/${threeHourly.weatherIcon}.png`)" :alt="threeHourly.weatherDesc" />
       <p>{{ threeHourly.weatherDesc }}</p>
       <p>{{ threeHourly.time.formattedDate }} {{ threeHourly.time.formattedTime }}</p>
       <p>{{ threeHourly.temp }}&deg;</p>
