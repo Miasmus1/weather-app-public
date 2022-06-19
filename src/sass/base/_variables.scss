@@ -21,6 +21,9 @@ $card-background-color: linear-gradient(to left bottom, #444, #111);
 
 /**** RESPONSIVE MANAGER ****/
 
+/* İlgili Açıklamalar: https://github.com/Miasmus1/weather-app-public#13-src--sass--base--_variablesscss */
+
+/* 1em = 16px */
 @mixin responsive($breakpoint) {
   @if $breakpoint == tablet-landscape {
     @media only screen and (max-width: 75em) {

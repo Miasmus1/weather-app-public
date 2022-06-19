@@ -26,8 +26,9 @@ export default {
     },
   },
   mounted() {
-    console.log(process.env.VUE_APP_OPEN_WEATHER_MAP_KEY);
-    this.cities.forEach((city) => this.$store.dispatch("fetchWeather", city));
+    this.cities.forEach((city) =>
+      this.$store.dispatch("fetchWeather", city)
+    ); /* İlgili Açıklamalar: https://github.com/Miasmus1/weather-app-public#21-ba%C5%9Flang%C4%B1%C3%A7 */
   },
 };
 </script>
