@@ -1,6 +1,6 @@
-# weather-app
+# the.weather
 
-## Optimized For Chromium based browsers (Chrome, Edge...), Firefox browser will have issue on some effects.
+#### Optimized For Chromium based browsers (Chrome, Edge...), Firefox browser will have issue on some effects.
 
 #### Project setup
 
