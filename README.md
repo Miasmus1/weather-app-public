@@ -90,7 +90,41 @@ Proje ilk açıldığında `src > main.js` dosyası `public > index.html` dosyas
 
 Bu instance `src > App.vue` dosyasını içerir. İlk olarak bu component görünür.
 
-### 2.2 API Calls
+### 2.2 Async Function Nedir?
+
+Javascript yukarıdan aşağıya doğru satır satır kodları execute ederek çalışır, buna senkron çalışma şekli denir.
+
+Ancak HTTP üzerinden bir request'te bulununca veya database'den veri çağırdığımızda, bu veriler anında hazır olmaz. Bu verileri senkron çalışma prensibine göre beklersek, javascript verinin gelmesini bekleyip bir sonraki satıra öyle geçecektir.
+Bu bütün uygulamanın, durması anlamına gelmektedir, uygun bir çalışma şekli değildir.
+
+Bu noktada async fonksiyonlar devreye girer, bunlara non-blocking code da denir. Bu kodlar kendisinden sonra gelecek kodları engel olmayacak şekilde çalışmaktadır.
+
+```
+console.log("Merhaba");
+setTimeout(() => {
+  console.log("3 saniye gecikme");
+}, "3000");
+console.log("Güle Güle");
+```
+
+Bu örnek eğer sync çalışma prensiblerine göre çalışsaydı, en son olarak "Güle Güle" kodunu görecektik.
+Çünkü uygulama 3 saniye boyunca setTimeout fonksiyonunu bekleyecekti.
+
+Ancak setTimeout bir async fonksiyondur 3 saniye sonra belirtilen callback fonksiyonu çağırır. Bu süre arka planda (Web API üzerinde) sayılmaya devam ederken,
+Javascript çalışmaya devam etmektedir.
+
+Bu sebepten dolayı "Güle Güle" kodu aslında 2. sırada yer alacaktır.
+
+```
+"Merhaba"
+"Güle Güle"
+
+"3 saniye gecikme"
+```
+
+Aşağıdaki örnekte async fonksiyonların iç yapısı incelenmiştir.
+
+### 2.3 API Calls
 
 `src > App.vue` dosyası yüklendiğinde ('mounted' lifecycle hook)
 
