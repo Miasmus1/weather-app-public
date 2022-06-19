@@ -14,9 +14,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
-  color: #ddd;
-  margin-bottom: -1rem;
+  color: $white-shade-1;
+  margin-bottom: -1.5rem;
 
   & > h1 {
     font-weight: 500;
@@ -25,14 +24,14 @@
   }
 
   & svg {
-    fill: #ddd;
+    fill: $white-shade-1;
     width: 4.2rem;
     height: 4.2rem;
   }
 
   & svg:hover {
-    fill: #222;
-    stroke: #ddd;
+    fill: $black-shade-2;
+    stroke: $white-shade-1;
   }
 }
 </style>

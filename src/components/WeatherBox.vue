@@ -152,9 +152,11 @@ export default {
   }
 }
 
+/* Card Back Enter - Exit Animations */
+
 .v-enter-active,
 .v-leave-active {
-  transition: all 0.5s ease 0.12s;
+  transition: all 0.3s ease 0.12s;
 }
 
 .v-enter-from,
