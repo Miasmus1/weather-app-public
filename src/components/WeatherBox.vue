@@ -18,9 +18,25 @@
 
     <div class="weather-box__details">
       <ul>
-        <li>{{ propCity.windSpeed }} km/h</li>
-        <li>{{ propCity.humidity }}%</li>
-        <li>{{ propCity.pressure }}hPa</li>
+        <li>
+          <svg role="img">
+            <use href="@/assets/ui-sprite.svg#wind"></use>
+          </svg>
+          {{ propCity.windSpeed }} km/h
+        </li>
+
+        <li>
+          <svg role="img">
+            <use href="@/assets/ui-sprite.svg#humidity"></use>
+          </svg>
+          {{ propCity.humidity }}%
+        </li>
+
+        <li>
+          <svg role="img">
+            <use href="@/assets/ui-sprite.svg#sunset"></use></svg
+          >{{ propCity.sunset.formattedTime }}
+        </li>
       </ul>
       <h2>{{ propCity.temp }}&deg;</h2>
     </div>
@@ -57,10 +73,10 @@ export default {
 <style scope lang="scss">
 .weather-box {
   position: relative;
-  background: linear-gradient(to bottom left, #333, #111);
+  background: $card-background-color;
   padding: 3rem 3rem 1rem 3rem;
-  border-radius: 8px;
-  box-shadow: 0 0 2px rgba(139, 139, 139, 0.5);
+  border-radius: $border-radius-md;
+  box-shadow: 0 0 2px rgba(191, 191, 191, 0.5);
   overflow: hidden;
 
   &__local {
@@ -105,9 +121,20 @@ export default {
       letter-spacing: 1px;
     }
 
+    & li {
+      display: flex;
+      align-items: center;
+    }
+
     & > h2 {
       font-size: 5.2rem;
       font-weight: 300;
+    }
+
+    & svg {
+      width: 2.6rem;
+      height: 2.6rem;
+      margin-right: 0.8rem;
     }
   }
 

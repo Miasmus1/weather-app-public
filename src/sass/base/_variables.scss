@@ -1,1 +1,19 @@
+/**** TYPOGRAPHY ****/
 $color-text-primary: #fff;
+
+/**** BORDER RADIUSES ****/
+$border-radius-md: 8px;
+
+/**** COLORS *****/
+
+/** black**/
+$black-pure: #000;
+$black-shade-1: #111;
+$black-shade-2: #222;
+$black-shade-3: #333;
+$black-shade-4: #444;
+$black-tint-1: #555;
+$black-tint-2: #666;
+
+$background-color-html: linear-gradient(to right top, #222, #111);
+$card-background-color: linear-gradient(to left bottom, #444, #111);

@@ -12,7 +12,7 @@ html {
   font-size: 62.5%; /* 1rem = 10px */
   scroll-behavior: smooth;
   height: 100vh;
-  background: linear-gradient(to right top, #222, #111);
+  background: $background-color-html;
   background-attachment: fixed;
 }
 
@@ -22,13 +22,6 @@ body {
   font-weight: 300;
   color: $color-text-primary;
   box-sizing: border-box;
-}
-
-button {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
 }
 
 ::-webkit-scrollbar-track {
@@ -44,5 +37,5 @@ button {
 ::-webkit-scrollbar-thumb {
   background-color: #222;
   border: 2px solid #666;
-  border-radius: 10px;
+  border-radius: $border-radius-md;
 }
