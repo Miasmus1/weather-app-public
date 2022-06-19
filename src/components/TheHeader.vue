@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <h1>the.weather</h1>
-    <a href="https://toygarsaral.com" target="_blank">
+    <a href="https://github.com/Miasmus1/weather-app-public#theweather" target="_blank">
       <svg role="img">
         <use href="@/assets/ui-sprite.svg#github"></use>
       </svg>
