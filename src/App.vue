@@ -29,10 +29,24 @@ export default {
 
 <style lang="scss">
 .grid-container {
-  width: 120rem;
-  margin: 2.5rem auto 0 auto;
+  width: 70%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 32rem 32rem 32rem;
+  justify-content: center;
   gap: 5rem 10rem;
+
+  @include responsive(tablet-landscape) {
+    grid-template-columns: 32rem 32rem;
+  }
+
+  @include responsive(mobile) {
+    grid-template-columns: 32rem;
+  }
+
+  @include responsive(mobile-xs) {
+    font-size: 1.2rem;
+    grid-template-columns: 25rem;
+  }
 }
 </style>

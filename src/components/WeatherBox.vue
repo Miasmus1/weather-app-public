@@ -38,7 +38,7 @@
           >{{ propCity.sunset.formattedTime }}
         </li>
       </ul>
-      <h2>{{ propCity.temp }}&deg;</h2>
+      <p>{{ propCity.temp }}&deg;</p>
     </div>
 
     <svg role="img" class="weather-box__btn" @click="toggleCardBack(propCity.name)">
@@ -70,7 +70,7 @@ export default {
 };
 </script>
 
-<style scope lang="scss">
+<style scoped lang="scss">
 .weather-box {
   position: relative;
   background: $card-background-color;
@@ -126,9 +126,9 @@ export default {
       align-items: center;
     }
 
-    & > h2 {
+    & > p:last-child {
       font-size: 5.2rem;
-      font-weight: 300;
+      letter-spacing: 1px;
     }
 
     & svg {

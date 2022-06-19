@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style scope lang="scss">
+<style scoped lang="scss">
 .weather-box-back {
   position: absolute;
   display: flex;
