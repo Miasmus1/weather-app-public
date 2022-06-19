@@ -6,29 +6,10 @@
 
 ```
 npm install
+
+npm run serve    /* Compiles and hot-reloads for development */
 ```
 
-##### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-##### Compiles and minifies for production
-
-```
-npm run build
-```
-
-##### Lints and fixes files
-
-```
-npm run lint
-```
-
-#### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## 1. STİLLER İLE İLGİLİ AÇIKLAMALAR
 
@@ -94,7 +75,7 @@ Eğer html elementinde font-size: 62.5% deklerasyonunu kullanmadıysanız. Media
 Ancak html elementimiz (root) 62.5% olduğunda font-size 10px dir. Eğer media query de bu birimi kullanırsak, browser varsayılanı olan 16px e göre değilde, 10px e göre breakpointlerimiz oluşturmuş oluruz.
 
 Bunu engellemek için "body" elementte deklere ettiğimiz font-size: 1.6rem i (16px) i kullanmalıyız.
-Bu yüzden 'rem' yerine 'em' kullanırız. Eğer kullanıcı browser ayarlarını 24px yaparsa;
+Bu yüzden 'rem' yerine 'em' kullanırız. Eğer kullanıcı browser ayarlarını 24px yaparsa:
 
 - 'rem' media queryleri 15px (10px \_ 0.625) e göre oluşacaktır.
 - 'em' media queryleri ise 24px (10px \_ 0.625 \* 1.6 ) e göre oluşacaktır.
@@ -107,17 +88,17 @@ Proje konumunda 'npm run serve' yazarak development serverı başlatılabilir.
 
 Proje ilk açıldığında `src > main.js` dosyası `public > index.html` dosyasında id'si app olan elemente bir 'Vue instance' oluşturur.
 
-Bu instance `src > App.vue` dosyasını içerir. İlk olarak bu sayfa görünür.
+Bu instance `src > App.vue` dosyasını içerir. İlk olarak bu component görünür.
 
 ### 2.2 API Calls
 
 `src > App.vue` dosyası yüklendiğinde ('mounted' lifecycle hook)
+
 `this.cities.forEach((city) => this.$store.dispatch("fetchWeather", city));` kodunu çağırır.
 
-Bu kod `store > index.js` "state:" de bulunan "cities" arrayinin içinde iterasyon yapar.
+Bu kod `store > index.js` "state:" property de bulunan "cities" arrayinin içinde iterasyon yapar. (6 şehir bulunmaktadır.)
 
-Her iterasyonda şehir adlarını, yine bu dosya içinde "action:" bulunan `async fetchWeather()`
-fonksiyonunu çağırır.
+Her iterasyonda bir şehir adı, `store > index.js` "action:" bulunan `async fetchWeather(..., city)` fonksiyonuna gönderilir ve fonksiyon çalıştırılır.
 
 ### `async fetchWeather(context, payload) {...}`
 
@@ -146,15 +127,15 @@ Burada `async` bir fonksiyon içinde:
     }
 ```
 
-- API request yapılır. Bu request HTTP üzerinden başka bir kaynağa (server) yapılan bir request olduğu için zaman alır. Bu yüzden diğer fonksiyonlarımızın çalışması için burada gelecek cevabı beklemeliyiz.
+- ``fetch()`` ile API request yapılır. method belirtilmediğinde varsayılan olarak "GET" requesti gönderilir. Bu HTTP üzerinden başka bir kaynağa (server) yapılan bir request olduğu için zaman alır. Bu yüzden diğer fonksiyonların çalışabilmesi için buradan gelecek cevap beklenir.
   `await` keyword de tam olarak bunu yapmaktadır.
-- `promise` sırt çantalı bir taşıyıcıya benzetilebilir, bu taşıyıcı yukarıda belirtilen adrese gideceği sözünü verir, ve bu zaman almaktadır. Eğer `await` keyword kullanmazsak kodumuz bize sadece bir `promise` döner yani taşıyıcının söz verdiği anı gösterir.
-- Bu requestin tamamlanması beklendikten sonra taşıyıcımız artık bir cevaba dönüşmüş olur yani karşıya gidip cevabı alıp kendini dönüştürür. ('promise' bir placeholder objeye benzetilebilir.)
+- ``fetch()`` ile bir `promise` oluşturulur. `promise` sırt çantalı bir taşıyıcıya benzetilebilir, bu taşıyıcı yukarıda belirtilen adrese gideceği sözünü verir ve bu zaman alır. Eğer `await` keyword kullanmazsak kodumuz bize sadece bir `promise` döner yani taşıyıcının söz verdiği anı gösterir.
+- Bu requestin tamamlanması ``await`` ile beklendikten sonra taşıyıcımız artık bir cevaba dönüşmüş olur yani karşıya gidip cevabı alıp kendini dönüştürerek geri döner. ('promise' bir placeholder objeye benzetilebilir.)
 - Ancak taşıyıcımızın dönüştüğü obje tam olarak istediğimiz objeyi değil HTTP cevabınının tamamını içerir.
 - Bu HTTP cevabına göre basit bir error check yapabiliriz `if (!response.ok)` eğer false ise bu kod block çalıştırılarak, `throw` ile konsola hata gönderilir ve fonksiyon durdurulur (sonraki kodlara devam etmez).
-- 'response' objesinde `body` propertysi ihtiyacımız olan veriyi içermektedir. Ancak burası 'ReadableStream' olarak gözükmektedir. Bu verinin küçük chunklar halinde olduğunu göstermektedir.
+- response.ok: true ise fonksiyon çalışmaya devam eder.
+- 'response' objesinde `body` propertysi ihtiyacımız olan veriyi içermektedir. Ancak burası 'ReadableStream' olarak gözükmektedir. Bu verinin küçük chunklar halinde olduğunu belirtmektedir.
 - Bu veriyi kullanılabilir bir javascript objesine dönüştürebilmek için `.json()` methodundan faydalanarak veriyi çözümleriz.
 - Chunklara ayrılmış bu veriyi çözümlemek zaman aldığından `.json()` methodu da beklenmelidir.
-  > API den gelen formata göre bu method (fotoğraf vb.. için) `.blob()` (müzikler vb.. için) `.arrayBuffer()` olarak değişebilir...
-
-Bu method da tamamlandıktan sonra artık uygulamamız içinde kullanılabilir, javascript objesini elde ederiz.
+  > API den gelen formata göre bu method (fotoğraf vb.. için) `.blob()` (müzikler vb.. için) `.arrayBuffer()` gibi methodlarla değişebilir.
+- Son olarak bu method tamamlandıktan sonra artık uygulamamız içinde kullanılabilir, bir başka bilgisayardan edindiğimiz, javascript objesini elde ederiz.
