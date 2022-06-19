@@ -10,7 +10,6 @@ npm install
 npm run serve    /* Compiles and hot-reloads for development */
 ```
 
-
 ## 1. STİLLER İLE İLGİLİ AÇIKLAMALAR
 
 ### 1.1 `src > sass > base > _base.scss`
@@ -122,8 +121,6 @@ Bu sebepten dolayı "Güle Güle" kodu aslında 2. sırada yer alacaktır.
 "3 saniye gecikme"
 ```
 
-Aşağıdaki örnekte async fonksiyonların iç yapısı incelenmiştir.
-
 ### 2.3 API Calls
 
 `src > App.vue` dosyası yüklendiğinde ('mounted' lifecycle hook)
@@ -161,10 +158,10 @@ Burada `async` bir fonksiyon içinde:
     }
 ```
 
-- ``fetch()`` ile API request yapılır. method belirtilmediğinde varsayılan olarak "GET" requesti gönderilir. Bu HTTP üzerinden başka bir kaynağa (server) yapılan bir request olduğu için zaman alır. Bu yüzden diğer fonksiyonların çalışabilmesi için buradan gelecek cevap beklenir.
+- `fetch()` ile API request yapılır. method belirtilmediğinde varsayılan olarak "GET" requesti gönderilir. Bu HTTP üzerinden başka bir kaynağa (server) yapılan bir request olduğu için zaman alır. Bu yüzden diğer fonksiyonların çalışabilmesi için buradan gelecek cevap beklenir.
   `await` keyword de tam olarak bunu yapmaktadır.
-- ``fetch()`` ile bir `promise` oluşturulur. `promise` sırt çantalı bir taşıyıcıya benzetilebilir, bu taşıyıcı yukarıda belirtilen adrese gideceği sözünü verir ve bu zaman alır. Eğer `await` keyword kullanmazsak kodumuz bize sadece bir `promise` döner yani taşıyıcının söz verdiği anı gösterir.
-- Bu requestin tamamlanması ``await`` ile beklendikten sonra taşıyıcımız artık bir cevaba dönüşmüş olur yani karşıya gidip cevabı alıp kendini dönüştürerek geri döner. ('promise' bir placeholder objeye benzetilebilir.)
+- `fetch()` ile bir `promise` oluşturulur. `promise` sırt çantalı bir taşıyıcıya benzetilebilir, bu taşıyıcı yukarıda belirtilen adrese gideceği sözünü verir ve bu zaman alır. Eğer `await` keyword kullanmazsak kodumuz bize sadece bir `promise` döner yani taşıyıcının söz verdiği anı gösterir.
+- Bu requestin tamamlanması `await` ile beklendikten sonra taşıyıcımız artık bir cevaba dönüşmüş olur yani karşıya gidip cevabı alıp kendini dönüştürerek geri döner. ('promise' bir placeholder objeye benzetilebilir.)
 - Ancak taşıyıcımızın dönüştüğü obje tam olarak istediğimiz objeyi değil HTTP cevabınının tamamını içerir.
 - Bu HTTP cevabına göre basit bir error check yapabiliriz `if (!response.ok)` eğer false ise bu kod block çalıştırılarak, `throw` ile konsola hata gönderilir ve fonksiyon durdurulur (sonraki kodlara devam etmez).
 - response.ok: true ise fonksiyon çalışmaya devam eder.

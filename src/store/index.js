@@ -55,7 +55,7 @@ export default createStore({
     },
   },
   actions: {
-    // İlgili Açıklamalar: https://github.com/Miasmus1/weather-app-public#21-ba%C5%9Flang%C4%B1%C3%A7 //
+    // İlgili Açıklamalar: https://github.com/Miasmus1/weather-app-public#22-async-function-nedir //
     async fetchWeather(context, payload) {
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${payload}&appid=${process.env.VUE_APP_OPEN_WEATHER_MAP_KEY}&units=metric`
