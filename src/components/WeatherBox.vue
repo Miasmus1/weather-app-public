@@ -12,7 +12,7 @@
     </div>
 
     <div class="weather-box__visual">
-      <img :src="`../icons/${propCity.weatherIcon}.png`" :alt="propCity.weatherDesc" />
+      <img :src="require(`@/assets/icons/${propCity.weatherIcon}.png`)" :alt="propCity.weatherDesc" />
       <p>{{ propCity.weatherDesc }}</p>
     </div>
 
