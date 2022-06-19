@@ -53,6 +53,7 @@
 
 <script>
 import WeatherBoxBack from "@/components/WeatherBoxBack.vue";
+
 export default {
   props: ["propCity"],
   components: { WeatherBoxBack },
@@ -74,7 +75,7 @@ export default {
 .weather-box {
   position: relative;
   background: $card-background-color;
-  padding: 3rem 3rem 1rem 3rem;
+  padding: 2rem 3rem 1rem 3rem;
   border-radius: $border-radius-md;
   box-shadow: 0 0 2px rgba(191, 191, 191, 0.5);
   overflow: hidden;
@@ -102,8 +103,8 @@ export default {
     margin: 2rem 0 6rem 0;
 
     & > img {
-      width: 12rem;
-      height: 12rem;
+      width: 10rem;
+      height: 10rem;
     }
 
     & > p {

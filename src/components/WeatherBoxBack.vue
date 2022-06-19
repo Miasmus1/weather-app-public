@@ -33,7 +33,7 @@ export default {
   padding: 1rem;
   bottom: 0px;
   left: 0px;
-  height: 83%;
+  height: 85%;
   width: 100%;
   background-color: rgba(20, 20, 20, 0.1);
   backdrop-filter: blur(14px);

@@ -1,16 +1,21 @@
 <template>
-  <main class="grid-container">
+  <div class="grid-container">
+    <header>
+      <the-header></the-header>
+    </header>
     <weather-box v-for="city in cityWeather" :key="city.id" :prop-city="city"></weather-box>
-  </main>
+  </div>
 </template>
 
 <script>
+import TheHeader from "@/components/TheHeader.vue";
 import WeatherBox from "./components/WeatherBox.vue";
 
 export default {
   name: "App",
   components: {
     WeatherBox,
+    TheHeader,
   },
   computed: {
     cities() {
@@ -34,7 +39,11 @@ export default {
   display: grid;
   grid-template-columns: 32rem 32rem 32rem;
   justify-content: center;
-  gap: 5rem 10rem;
+  gap: 4rem 10rem;
+
+  header {
+    grid-column: 1 / -1;
+  }
 
   @include responsive(tablet-landscape) {
     grid-template-columns: 32rem 32rem;
