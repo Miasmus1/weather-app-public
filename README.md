@@ -69,15 +69,13 @@ Böylece tekrar tekrar '@media ...." şeklinde olan media queryi yazmaya gerek k
 
 ### 1.5 Neden 'rem' değil 'em'?
 
-Eğer html elementinde font-size: 62.5% deklerasyonunu kullanmadıysanız. Media querylerde **rem** birimi kullanabilirsiniz.
+"rem" ve "em" birimleri media querylerde kullanıldığında her zaman browserın initial font-size ını dikkate alır. Yani html ile font-size değiştirmiş olsak bile, media querylerde her zaman browser varsayılan değeri olan 16px kullanılır.
 
-Ancak html elementimiz (root) 62.5% olduğunda font-size 10px dir. Eğer media query de bu birimi kullanırsak, browser varsayılanı olan 16px e göre değilde, 10px e göre breakpointlerimiz oluşturmuş oluruz.
+Yani 1rem = 1em = 16px'dir.
 
-Bunu engellemek için "body" elementte deklere ettiğimiz font-size: 1.6rem i (16px) i kullanmalıyız.
-Bu yüzden 'rem' yerine 'em' kullanırız. Eğer kullanıcı browser ayarlarını 24px yaparsa:
+Ancak bazı browserlarda (safari) "rem" media querylerde kullanıldığında bazı buglar oluşmaktadır. (breakpoint yanlış hesaplanıyor).
 
-- 'rem' media queryleri 15px (10px \_ 0.625) e göre oluşacaktır.
-- 'em' media queryleri ise 24px (10px \_ 0.625 \* 1.6 ) e göre oluşacaktır.
+Bu yüzden "rem" yani 16px değerine eşit olan "em" değerini kullanmak daha doğru olacaktır.
 
 # 2. UYGULAMA ÇALIŞMA PRESİPLERİ
 
